@@ -20,8 +20,9 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(words) {
   // seu código aqui
+  return [words.pop(), words[0]].join(', ');
 }
 
 // Desafio 5
