@@ -76,11 +76,63 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
+function encode(phrase) {
   // seu código aqui
+  let newPhrase = [];
+  for (let index = 0; index < phrase.length; index += 1) {
+    newPhrase.push(phrase[index]);
+    if (phrase[index] === 'a') {
+      newPhrase.pop();
+      newPhrase.push('1');
+    }
+    if (phrase[index] === 'e') {
+      newPhrase.pop();
+      newPhrase.push('2');
+    }
+    if (phrase[index] === 'i') {
+      newPhrase.pop();
+      newPhrase.push('3');
+    }
+    if (phrase[index] === 'o') {
+      newPhrase.pop();
+      newPhrase.push('4');
+    }
+    if (phrase[index] === 'u') {
+      newPhrase.pop();
+      newPhrase.push('5');
+    }
+  }
+  
+  return newPhrase.join('');
 }
-function decode() {
+
+function decode(phrase) {
   // seu código aqui
+  let newPhrase = [];
+  for (let index = 0; index < phrase.length; index += 1) {
+    newPhrase.push(phrase[index]);
+    if (phrase[index] === '1') {
+      newPhrase.pop();
+      newPhrase.push('a');
+    }
+    if (phrase[index] === '2') {
+      newPhrase.pop();
+      newPhrase.push('e');
+    }
+    if (phrase[index] === '3') {
+      newPhrase.pop();
+      newPhrase.push('i');
+    }
+    if (phrase[index] === '4') {
+      newPhrase.pop();
+      newPhrase.push('o');
+    }
+    if (phrase[index] === '5') {
+      newPhrase.pop();
+      newPhrase.push('u');
+    }
+  }
+  return newPhrase.join('');
 }
 
 // Desafio 10
