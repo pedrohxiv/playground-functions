@@ -102,7 +102,7 @@ function encode(phrase) {
       newPhrase.push('5');
     }
   }
-  
+
   return newPhrase.join('');
 }
 
@@ -136,8 +136,20 @@ function decode(phrase) {
 }
 
 // Desafio 10
-function techList() {
+function techList(technologies, names) {
   // seu código aqui
+  let array = [];
+  if (technologies[0] === undefined) {
+    return 'Vazio!';
+  }
+  technologies.sort();
+  for (let index = 0; index < technologies.length; index += 1) {
+    array.push({
+      tech: technologies[index],
+      name: names,
+    });
+  }
+  return array;
 }
 
 module.exports = {
