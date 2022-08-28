@@ -58,19 +58,24 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function fizzBuzzChecking(numbers) {
+  let strings = '';
+  if (numbers % 3 === 0 && numbers % 5 === 0) {
+    strings = 'fizzBuzz';
+  } else if (numbers % 3 === 0) {
+    strings = 'fizz';
+  } else if (numbers % 5 === 0) {
+    strings = 'buzz';
+  } else {
+    strings = 'bug!';
+  }
+  return strings;
+}
 function fizzBuzz(numbers) {
   // seu código aqui
   let strings = [];
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      strings.push('fizzBuzz');
-    } else if (numbers[index] % 3 === 0) {
-      strings.push('fizz');
-    } else if (numbers[index] % 5 === 0) {
-      strings.push('buzz');
-    } else {
-      strings.push('bug!');
-    }
+    strings.push(fizzBuzzChecking(numbers[index]));
   }
   return strings;
 }
