@@ -1,27 +1,49 @@
 // Desafio 11
-function generatePhoneNumber(arrayNumbers) {
-  // seu código aqui
+function sizeCheck(arrayNumbers) {
   if (arrayNumbers.length !== 11) {
-    return 'Array com tamanho incorreto.';
+    return 1;
   }
-  let count = 0;
-  let element = 0;
-  for (let i = 0; i < arrayNumbers.length; i += 1) {
-    if (arrayNumbers[i] < 0 || arrayNumbers[i] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
+}
+function numberCheck(arrayNumbers) {
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] < 0 || arrayNumbers[index] > 9) {
+      return 1;
     }
+  }
+}
+function equalityCheck(arrayNumbers, element, count) {
+  for (let j = 0; j < arrayNumbers.length; j += 1) {
+    if (element === arrayNumbers[j]) {
+      count += 1;
+    }
+  }
+  return count;
+}
+function repeteadCheck(arrayNumbers, element, count) {
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
     count = 0;
     element = arrayNumbers[i];
-    for (let j = 0; j < arrayNumbers.length; j += 1) {
-      if (element === arrayNumbers[j]) {
-        count += 1;
-      }
-    }
-    if (count >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
+    if (equalityCheck(arrayNumbers, element, count) >= 3) {
+      return 1;
     }
   }
-  let numbers = `(${arrayNumbers[0]}${arrayNumbers[1]}) ${arrayNumbers[2]}${arrayNumbers[3]}${arrayNumbers[4]}${arrayNumbers[5]}${arrayNumbers[6]}-${arrayNumbers[7]}${arrayNumbers[8]}${arrayNumbers[9]}${arrayNumbers[10]}`;
+}
+function generatePhoneNumber(arrayNumbers, element, count) {
+  // seu código aqui
+  if (sizeCheck(arrayNumbers) === 1) {
+    return 'Array com tamanho incorreto.';
+  }
+  if (numberCheck(arrayNumbers) === 1) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  if (repeteadCheck(arrayNumbers, element, count) === 1) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  let part1 = `(${arrayNumbers[0]}${arrayNumbers[1]}) `;
+  let part2 = `${arrayNumbers[2]}${arrayNumbers[3]}${arrayNumbers[4]}`;
+  let part3 = `${arrayNumbers[5]}${arrayNumbers[6]}-`;
+  let part4 = `${arrayNumbers[7]}${arrayNumbers[8]}${arrayNumbers[9]}${arrayNumbers[10]}`;
+  let numbers = part1 + part2 + part3 + part4;
   return numbers;
 }
 
