@@ -33,8 +33,6 @@ Para utilizar as funções desenvolvidas neste projeto, você precisa somente cl
 ## Tecnologias Utilizadas
 
 - JavaScript
-- Node.js (para execução de testes)
-- Jest (framework de testes)
 
 ## Contato
 
