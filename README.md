@@ -1,10 +1,10 @@
 # Playground Functions
 
-O Playground Functions é um projeto que consiste em um conjunto de funções JavaScript que você deve implementar para resolver diversos problemas. Este projeto serve como uma prática para aprimorar suas habilidades em JavaScript e lógica de programação.
+O Playground Functions é um projeto que consiste em um conjunto de funções JavaScript que implementei para resolver diversos problemas. Este projeto serve como uma prática para aprimorar minhas habilidades em JavaScript e lógica de programação.
 
 ## O que foi desenvolvido
 
-Neste projeto, foi implementar 10 funções JavaScript diferentes. Cada função aborda um problema específico, desde a manipulação de booleanos até a transformação de strings. Aqui está uma lista das funções que foram desenvolvidas:
+Neste projeto, foi implementado 10 funções JavaScript diferentes. Cada função aborda um problema específico, desde a manipulação de booleanos até a transformação de strings. Aqui está uma lista das funções que foram desenvolvidas:
 
 1. `compareTrue(boolean1, boolean2)`: Compara dois valores booleanos e retorna `true` se ambos forem verdadeiros.
 
