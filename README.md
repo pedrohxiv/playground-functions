@@ -1,4 +1,4 @@
-# Playground Functions
+# Projeto Playground Functions
 
 O Playground Functions é um projeto que consiste em um conjunto de funções JavaScript que implementei para resolver diversos problemas. Este projeto serve como uma prática para aprimorar minhas habilidades em JavaScript e lógica de programação.
 
